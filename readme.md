@@ -45,20 +45,22 @@ Ensure you have the following installed:
 | POST   | `/api/auth/login`  | Authenticate user   | No        |
 
 ## Request Body (Signup)
-Json data
+```Json
 {
   "name": "John Doe",
   "email": "johndoe@example.com",
   "password": "securepassword",
   "role": "FarmAdmin"
 }
+```
 
 ## Request Body (Login)
-Json data
+```json
 {
   "email": "johndoe@example.com",
   "password": "securepassword"
 }
+```
 
 ## Farm Management
 | Method | Endpoint     | Description              | Protected |
@@ -67,11 +69,13 @@ Json data
 | GET    | `/api/farms` | View all farms          | Yes (Admin, Manager) |
  
 ## Request Body (Create Farm)
-Json data
+```json
 {
   "name": "Green Valley Farm",
   "location": "California, USA"
 }
+```
+
 ## Task Management
 | Method | Endpoint          | Description         | Protected |
 |--------|------------------|---------------------|-----------|
@@ -80,19 +84,20 @@ Json data
 | GET    | `/api/tasks` | View all tasks | Yes (Admin, Manager) |
 
 ## Request Body (Create Task)
-Json data
+```Json 
 {
   "title": "Irrigation Check",
   "description": "Ensure all irrigation systems are functioning",
   "assignedTo": "user_id",
   "deadline": "2024-04-10"
 }
+```
 ## Request Body (Update Task Status)
-json
+```json
 {
   "status": "Completed"
 }
- 
+ ```
 ## Middleware
 | Middleware | Description |
 |------------|-------------|
